@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Loader, Card, FormField } from '../components'
 
 const RenderCards = ({ data, title }) => {
-  
+
   if (data?.length > 0) {
     return (
       data.map((post) => <Card key={post._id} {...post} />)
@@ -49,7 +49,7 @@ const Home = () => {
           <FormField />
         </div>
 
-        <div className='mt-10 bg-slate-400 flex items-center'>
+        <div className='mt-10'>
           {loading ? (
             <div className='flex justify-center items-center'>
               <Loader />
