@@ -1,14 +1,11 @@
 import React from 'react';
 import "./index.css";
 
-import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route , Routes } from "react-router-dom";
 
 import { logo } from "./assets";
 
 import { Home, CreatePost } from "./pages";
-
-import { Loader } from './components';
-import { Suspense } from 'react';
 
 const App = () => {
   return (
@@ -18,7 +15,8 @@ const App = () => {
         <header 
           className='w-full flex justify-between 
           items-center bg-white sm:px-8 py-4 
-          border-b border-b-[#e6ebf4] scroll-smooth touch-pan-up'
+          border-b border-b-[#e6ebf4] 
+          scroll-smooth touch-pan-up'
         >
           <Link to="/">
             <img 
@@ -35,10 +33,12 @@ const App = () => {
             px-4 py-2 rounded-md 
             hover:text-yellow-400 shadow-xl 
             duration-200 ease-in-out 
-            hover:scale-110 transition-all delay-75'
+            hover:scale-105 transition-all delay-75'
           >
             Create
           </Link>
+
+
         </header>
         {/* ====================Main-page============================== */}
         <main 
