@@ -1,12 +1,19 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import "./index.css";
-
 import { BrowserRouter, Link, Route , Routes } from "react-router-dom";
 
 import { logo } from "./assets";
+import { Spinner } from '@chakra-ui/react'
 
-import { Home, CreatePost } from "./pages";
-import { Loader } from './components';
+const CreatePostView = lazy(() => delayView(import('./pages/CreatePost')));
+const HomeView = lazy(() => delayView(import('./pages/Home')));
+
+// ==============Delay functions ============================
+function delayView(promise) {
+  return new Promise(resolve => {
+    setTimeout(resolve, 1500);
+  }).then(() => promise);
+}
 
 const App = () => {
   return (
@@ -38,18 +45,30 @@ const App = () => {
           >
             Create
           </Link>
-
-
         </header>
         {/* ====================Main-page============================== */}
         <main 
           className='sm:p-8 px-4 py-8 w-full 
           bg-[#f9fafe] min-h-[calc(100vh-73px)]'
         >
-          <Suspense fallback={<Loader />}>
+          <Suspense 
+            fallback={
+              <div className='flex justify-center items-center'>
+                <Spinner  
+                  thickness='4px'
+                  speed='0.65s'
+                  emptyColor='gray.200'
+                  color='red.500'
+                  size='xl' 
+                  colorScheme='twitter'
+                />
+              </div>
+              
+            }
+          >
             <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/create-posts' element={<CreatePost />} />
+              <Route path='/' element={<HomeView />} />
+              <Route path='/create-posts' element={<CreatePostView />} />
             </Routes>
           </Suspense>          
         </main>
