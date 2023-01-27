@@ -33,7 +33,7 @@ const App = () => {
             px-4 py-2 rounded-md 
             hover:text-yellow-400 shadow-xl 
             duration-200 ease-in-out 
-            hover:scale-110 transition-all delay-75'
+            transition-all delay-75'
           >
             Create
           </Link>
