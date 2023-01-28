@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route , Routes } from "react-router-dom";
 
 import { logo } from "./assets";
 import { Spinner } from '@chakra-ui/react'
+import { FaReact } from "react-icons/fa";
 
 const CreatePostView = lazy(() => delayView(import('./pages/CreatePost')));
 const HomeView = lazy(() => delayView(import('./pages/Home')));
@@ -27,11 +28,22 @@ const App = () => {
           scroll-smooth touch-pan-up'
         >
           <Link to="/">
-            <img 
-              src={logo} 
-              alt="logo"
-              className='w-28 object-contain drop-shadow-x cursor-pointer' 
-            />
+            <div className='flex justify-center items-center'>
+              <img 
+                src={logo} 
+                alt="logo"
+                className='w-28 object-contain drop-shadow-x cursor-pointer' 
+              />
+              <div 
+                className='flex justify-center 
+                items-center mx-2 text-blue-500 
+                hover:rotate-90 transition-all duration-200 ease-in-out'
+              >
+                <FaReact
+                 className='w-6 h-6 object-contain'
+                />
+              </div>
+            </div>
           </Link>
 
           <Link 
