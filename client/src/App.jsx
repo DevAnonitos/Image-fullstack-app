@@ -84,6 +84,11 @@ const App = () => {
             </Routes>
           </Suspense>          
         </main>
+
+        {/* =========================Footer============================= */}
+        <footer>
+          
+        </footer>
       </BrowserRouter>
     </>
   )

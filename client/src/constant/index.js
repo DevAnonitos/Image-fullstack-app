@@ -45,4 +45,7 @@ export const surpriseMePrompts = [
     'Synthwave aeroplane',
     'A man wanders through the rainy streets of Tokyo, with bright neon signs, 50mm',
     'A Space Shuttle flying above Cape Town, digital art',
+    'Ocean waves crashing on beach rocks',
+    'A surreal pack of wolves by greg rutkowski trending on behance',
+    'Doctor strange floating in the air surrounded by purple and yellow lightning and stars'
   ];
