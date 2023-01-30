@@ -47,5 +47,8 @@ export const surpriseMePrompts = [
     'A Space Shuttle flying above Cape Town, digital art',
     'Ocean waves crashing on beach rocks',
     'A surreal pack of wolves by greg rutkowski trending on behance',
-    'Doctor strange floating in the air surrounded by purple and yellow lightning and stars'
+    'Doctor strange floating in the air surrounded by purple and yellow lightning and stars',
+    'Freeform ferrofluids, beautiful dark chaos, swirling black frequency --ar 3:4 --iw 9 --q 2 --s 1250',
+    'a home built in a huge Soap bubble, windows, doors, porches, awnings, middle of SPACE, cyberpunk lights, Hyper Detail, 8K, HD, Octane Rendering, Unreal Engine, V-Ray, full hd -- s5000 --uplight --q 3 --stop 80--w 0.5 --ar 1:3',
+    'Rubber Duck Aliens visiting the Earth for the first time, hyper-realistic, cinematic, detailed --ar 16:9',
   ];
