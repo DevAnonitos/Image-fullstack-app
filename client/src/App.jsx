@@ -4,7 +4,8 @@ import { BrowserRouter, Link, Route , Routes } from "react-router-dom";
 
 import { logo } from "./assets";
 import { Spinner } from '@chakra-ui/react'
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaDiscord, FaFacebook } from "react-icons/fa";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 
 const CreatePostView = lazy(() => delayView(import('./pages/CreatePost')));
 const HomeView = lazy(() => delayView(import('./pages/Home')));
@@ -40,7 +41,7 @@ const App = () => {
                 hover:rotate-90 transition-all duration-200 ease-in-out'
               >
                 <FaReact
-                 className='w-6 h-6 object-contain'
+                  className='w-6 h-6 object-contain'
                 />
               </div>
             </div>
@@ -87,7 +88,35 @@ const App = () => {
 
         {/* =========================Footer============================= */}
         <footer>
-          
+          {/* <div className='container pt-9 sm:justify-center items-center'>
+            <div className='flex justify-center mb-9'>
+              
+              <a href="#" className='w-6 h-6 mx-4 px-2 p-4'>
+                <AiFillGithub />
+              </a>
+              <a href="#" className='w-6 h-6 mx-4 px-2 p-4'>
+                <FaDiscord />
+              </a>
+              <a href="#" className='w-6 h-6 mx-4 px-2 p-4'>
+                <FaFacebook />
+              </a>
+              <a href="#" className='w-6 h-6 mx-4 px-2 p-4'>
+                <AiFillInstagram />
+              </a>
+            </div>
+          </div> */}
+
+          {/* <div 
+            className='text-center text-gray-500 p-4 rounded-lg'
+            style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}
+          >
+            © 2023 Copyright:
+            <a 
+              className='text-cyan-600 ml-2' 
+              href="https://tailwind-elements.com/">
+              BaoNguyenDev
+            </a>
+          </div> */}
         </footer>
       </BrowserRouter>
     </>
