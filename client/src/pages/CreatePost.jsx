@@ -89,32 +89,32 @@ const CreatePost = () => {
   return (
     <>
       <section className='max-w-7xl mx-auto'>
-        <div>         
-          <h1 
-            className="font-extrabold 
+        <div>
+          <h1
+            className="font-extrabold
             text-[#222328] text-[32px]"
           >
             {/* <Link to='/'>
-              <ArrowBackIcon 
-                w={5} 
-                h={5} 
-                color="gray.500" 
+              <ArrowBackIcon
+                w={5}
+                h={5}
+                color="gray.500"
                 className='flex justify-center items-center my-4'
               />
             </Link>    */}
             Create
           </h1>
-          <p 
-            className="mt-2 text-[#666e75] 
+          <p
+            className="mt-2 text-[#666e75]
             text-[14px] max-w-[500px]"
           >
-            Generate an imaginative image through 
+            Generate an imaginative image through
             DALL-E AI and share it with the community
           </p>
         </div>
 
-        <form 
-          className='mt-16 max-w-3xl' 
+        <form
+          className='mt-16 max-w-3xl'
           onSubmit={handleSubmit}
         >
           <div className='flex flex-col gap-5'>
@@ -124,7 +124,7 @@ const CreatePost = () => {
               name='name'
               placeholder='BaoNguyen'
               handleChange={handleChange}
-              value={form.name}             
+              value={form.name}
             />
             <FormField
               labelName='Prompt'
@@ -132,18 +132,18 @@ const CreatePost = () => {
               name='prompt'
               placeholder='Synthwave aeroplane'
               handleChange={handleChange}
-              value={form.prompt}  
+              value={form.prompt}
               isSurpriseMe
-              handleSurpriseMe={handleSurpriseMe}          
+              handleSurpriseMe={handleSurpriseMe}
             />
 
-            <div 
-              className='relative bg-gray-50 
-              border border-gray-300 
-              text-gray-900 text-sm 
-              rounded-lg focus:ring-blue-500 
-              focus:border-blue-500 w-64 
-              p-3 h-64 flex 
+            <div
+              className='relative bg-gray-50
+              border border-gray-300
+              text-gray-900 text-sm
+              rounded-lg focus:ring-blue-500
+              focus:border-blue-500 w-64
+              p-3 h-64 flex
               justify-center items-center shadow-teal-600'
             >
               { form.photo ? (
@@ -161,9 +161,9 @@ const CreatePost = () => {
               )}
 
               {generatingImg && (
-                <div 
-                  className="absolute inset-0 z-0 
-                  flex justify-center items-center 
+                <div
+                  className="absolute inset-0 z-0
+                  flex justify-center items-center
                   bg-[rgba(0,0,0,0.5)] rounded-lg"
                 >
                   <Loader />
@@ -172,12 +172,12 @@ const CreatePost = () => {
             </div>
 
             <div className='mt-5 flex gap-5'>
-              <button 
+              <button
                 type='button'
                 onClick={generateImage}
-                className='text-white bg-emerald-400 
+                className='text-white bg-emerald-400
                 font-medium rounded-full
-                text-sm w-full 
+                text-sm w-full
                 sm:w-auto px-5 py-2.5 text-center'
               >
                 {generatingImg ? 'Generate Image' : 'Generate'}
@@ -188,10 +188,10 @@ const CreatePost = () => {
               <p className='mt-2 text-[#666e75] text-[14px]'>
                 ** Once you have created the image you want, you can share it with others in the community **
               </p>
-              <button 
+              <button
                 type='submit'
-                className='mt-3 text-white bg-[#6469ff] 
-                font-medium rounded-full text-sm 
+                className='mt-3 text-white bg-[#6469ff]
+                font-medium rounded-full text-sm
                 w-full sm:w-auto px-5 py-2.5 text-center'
               >
                 {loading ? "Sharing....." : "Share with the Community"}
