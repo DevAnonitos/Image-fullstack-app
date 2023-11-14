@@ -17,7 +17,7 @@
     "mongodb": "^4.13.0",
     "mongoose": "^6.8.2",
     "nodemon": "^2.0.20",
-    "openai": "^3.1.0"
+    "openai": "^4.17.4"
   },
   "devDependencies": {
     "eslint": "^8.31.0",
